@@ -74,7 +74,9 @@ async function fetchOilsData(): Promise<SimplifiedProduct[]> {
   }
 }
 
-export default async function ProductDetail(props: {
+export default async function ProductDetail({
+  params,
+}: {
   params: { slug: string };
 }) {
   const oilData = await fetchOilsData();
